@@ -3,6 +3,9 @@ Rails.application.routes.draw do
     controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   root to: 'pages#home'
 
-  get 'pages/index'
+  get 'imports', to: 'imports#index'
+
+  post 'imports', to: 'imports#upload'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
