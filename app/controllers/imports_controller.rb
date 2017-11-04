@@ -5,7 +5,7 @@ class ImportsController < ApplicationController
     @purchases = Purchase.all
     @sum_total = 0
     @purchases.each do |p|
-      @sum_total += p.item_price + p.purchase_count
+      @sum_total += p.item_price * p.purchase_count
     end
   end
 
