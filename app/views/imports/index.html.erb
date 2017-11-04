@@ -1,16 +1,17 @@
-<div class="container">
+<div class="container white-bg ct-pattern">
 
-  <h1>Selecione a tabela a ser importada</h1>
+  <h2>Selecione a tabela a ser importada</h2>
 
-  <%= form_tag({action: :upload}, multipart: true) do %>
-    <%= file_field_tag :file, :required => true %>
-    <%= submit_tag "Importar" %>
+  <%= form_tag({action: :upload}, multipart: true, class: 'form-inline' ) do %>
+    <%= file_field_tag :file, :required => true  %>
+    <%= submit_tag "Importar", class: "btn btn-primary" %>
   <% end %>
+
   <br>
-  <p>Receita total: <%= @sum_total %></p>
+  <p id="green-pattern"><strong>Receita total: <%= @sum_total %></strong></p>
   <br>
 
-  <table class="table">
+  <table class="table table-hover table-responsive-sm">
     <tr>
       <th>Comprador</th>
       <th>Descrição</th>
@@ -27,7 +28,6 @@
       <td><%= p.purchase_count %></td>
       <td><%= p.merchant_address %></td>
       <td><%= p.merchant_name %></td>
-      <td><%= p.total %></td>
     </tr>
   <% end %>
 </div>
