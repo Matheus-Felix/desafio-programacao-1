@@ -1,1 +1,24 @@
 // Specific CSS for your home-page
+body{
+  font-family: 'Raleway', sans-serif;
+}
+
+.home-style {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#nexaas-img {
+  height: 50px;
+}
+
+#banner{
+  background-image: image-url('businessmen.png');
+  // background: linear-gradient(135deg, #006C86 0%, #009db6 25%, #00cee7 50%, #00d3dc 75%, #00ddbe 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  // max-height: 900px;
+  height: 820px;
+  padding: 250px 0;
+  color: white !important;
+}

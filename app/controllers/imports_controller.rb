@@ -7,6 +7,8 @@ class ImportsController < ApplicationController
     @purchases.each do |p|
       @sum_total += p.item_price * p.purchase_count
     end
+  @disable_nav = false
+  @disable_footer = true
   end
 
   def upload
